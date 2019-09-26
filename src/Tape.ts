@@ -1,6 +1,5 @@
-import Int from './Int'
-import Natural from '../Natural/Natural'
-import Range from '../Real/Range'
+import { Int, Natural } from 'ts-number'
+import { Range } from 'ts-range'
 
 // interface Tape {
 //   index: Int,
@@ -13,6 +12,7 @@ interface Tape<I extends Int, R extends Range<number, Natural>> {
 
 namespace Tape {
 
+  export type TTT = number
   // export const admits = (a: any): a is Tape<Index, Index> => {
   //   const { index, range } = a
   //   if (!Index.admits(index)) return false
@@ -20,7 +20,9 @@ namespace Tape {
   //   return true
   // }
 
-  export const from = <I extends Int, R extends Range<number, Natural>>(index: I, range: R): Tape<I, R> => {
+  export const from =
+    <I extends Int, R extends Range<number, Natural>>(index: I, range: R): Tape<I, R> => {
+
     return { index, range }
   }
 }
