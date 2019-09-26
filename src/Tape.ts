@@ -12,7 +12,6 @@ interface Tape<I extends Int, R extends Range<number, Natural>> {
 
 namespace Tape {
 
-  export type TTT = number
   // export const admits = (a: any): a is Tape<Index, Index> => {
   //   const { index, range } = a
   //   if (!Index.admits(index)) return false
